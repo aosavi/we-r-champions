@@ -2,6 +2,8 @@
 
 An R masterclass series with a _tidyverse first_ approach and an _exploit now explore later_ mentality.
 
+- We R Champions (syllabus)
+- We R Preppers (prep guide)
 - We R Novices (R and tidyverse basics)
 - We R Analysts (data analysis)
 - We R Transformers (data transformation)
@@ -10,4 +12,4 @@ An R masterclass series with a _tidyverse first_ approach and an _exploit now ex
 - We R Publishers (communicating code)
 - We R Programmers (base R)
 
-Collaboratively created on Overleaf, incidentally pushed to GitHub.
+Written in [R Markdown](https://rmarkdown.rstudio.com/). Collaboratively created on [Overleaf](https://www.overleaf.com/). Incidentally pushed to GitHub.
