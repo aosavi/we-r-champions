@@ -1,0 +1,159 @@
+---
+title: We R Champions
+subtitle: Syllabus for the _We R Champions_ masterclass series
+author:
+  - Alexander Savi, Amsterdam Center for Learning Analytics, [alexandersavi.nl](https://www.alexandersavi.nl/)
+  - Simone Plak, Amsterdam Center for Learning Analytics
+date: "June 23, 2020"
+output:
+  html_document:
+    fig_width: 7
+    highlight: "kate"
+    number_sections: FALSE
+    theme: "spacelab"
+    toc: true
+    toc_depth: 1
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+rmarkdown::find_pandoc(version = '2.7.3')  # 2.7.3 is version of pandoc shipped with rstudio that works with numberLines
+knitr::opts_chunk$set(echo=TRUE, collapse=TRUE, attr.source='.numberLines')
+
+# for PDF, use tinytex::install_tinytex()
+
+# Load packages
+library("cowsay")
+library("qgraph")
+```
+
+# R?
+
+Yes, because A to Q are silly, we skip right over to R. [R](https://en.wikipedia.org/wiki/R_(programming_language)) is a free and open-source programming language for statistical analyses.
+
+Sounds boring? It can do visualizations too! And interactive visualizations, even animations, if you fancy. It can do documents with integrated code and output (this syllabus was written in R). And it can even do presentations, journal articles, books, websites, what not!
+
+Well, there's a lot it cannot do. For one, it won't do your dishes. And you'll have to learn to program. That's doing your analyses without a mouse; just you and the keyboard.
+
+In return, you'll be able to use the [most popular](https://r4stats.com/articles/popularity/) and most powerful statistical software presently available. Its community built [over 15000 extensions](https://gist.github.com/daroczig/3cf06d6db4be2bbe3368) that are free for you to use. Ever wanted to perform a Bayesian binomial SEM ninja analysis with adaptive non-parametric splines? R can do, probably. As well as an ANOVA.
+
+As well as ASCII art (code is shown with a grey background and output is shown directly below it):
+
+```{r ascii}
+cowsay::say("We R Champions")
+```
+
+# Modular Masterclasses
+
+Want to learn R? It's simple. Sign up for our R Masterclass Series, and we'll teach you the basics. Both of us have lots of R experience and don't get angry easily, so you'll be in good hands.
+
+For your convenience, the masterclasses are modular. Think of them as your favorite water park: you may either start in the wading pool or skip right over to the high diving board. If you're new to R, join the _We R Novices_ masterclass. You'll get your feet wet, and by the end of it some of you will be able to tread water. That is, you'll get a taste of R and be able to decide on using it. If interest is sufficient, we'll organize follow-up masterclasses. We can adapt the content of those follow-up masterclasses to your specific wishes.
+
+# Sign up
+
+- Follow [this link](https://forms.gle/b12EdbdTYASjgVHo6) to join the _We R Novices_ masterclass, or to express your interest in one of the follow-up masterclasses.
+- Sign up __before March 23__
+- Save the date: Tuesday, June 23, 10:00-12:45, MF G502.
+- Lingua franca: Dutch or Dunglish, depending on the participants.
+- Questions: email us, or visit us in room MF B456.
+
+# Teachers
+
+- Alexander Savi ([email](mailto:o.a.savi@gmail.com)) taught Basic Skills in Statistics (in R) and Programming The Next Step. He has ten years of R experience.
+- Simone Plak ([email](mailto:s.plak@vu.nl)) taught Programming in Psychological Science (in R). She has six years of R experience.
+
+# Software & materials
+
+- [R](https://www.r-project.org/) and [RStudio Desktop](https://rstudio.com/products/rstudio/)
+- [Piazza](https://piazza.com/)
+- An [R Markdown](https://rmarkdown.rstudio.com/) document with resources and exercises
+
+# What will I learn?
+
+## Fundamental masterclasses
+
+- In __We R Novices__, you'll learn..
+  - how to set up R
+  - what R can be used for
+  - how to use RStudio Desktop
+  - how to use good programming habits (projects, scripts, comments)
+  - how to navigate through R space (packages, vignettes, cheat sheets, Q&A)
+  - how to get from tidy data to p-values
+  - how to continue to learn and use R on your own
+  - how to use R without having to program
+
+- In __We R Analysts__, you'll learn..
+  - how to perform basic statistical analyses
+
+- In __We R Novices__ and __We R Analysts__, you'll NOT learn..
+  - base R. Even though it's the basis, it's advanced. You'll be able to learn it in the _We R Programmers_ masterclass.
+  - how to get your data transformed and tidied. Instead, use your favorite data editor or learn how to do it in R in the _We R Transformers_ masterclass.
+  - how to create figures. Becoming an artist takes more than an hour, but you'll be able to learn it in the _We R Visualizers_ masterclass.
+  - how to become an R ninja. Take the _We R Reproducible_, _We R Publishers_, and _We R Programmers_ masterclasses to become a Master of Rts.
+
+You'll walk away with the R software installed and a personal R script that you can use to reproduce everything we covered in the masterclass.
+
+## Recommended masterclasses
+
+_(if interest is sufficient)_
+
+- In __We R Transformers__, you'll learn..
+  - how to import data from Excel, SPSS, SAS, Stata, and R, using the _[readr](https://readr.tidyverse.org/)_, _[haven](https://haven.tidyverse.org/)_, and _[readxl](https://readxl.tidyverse.org/)_ packages
+  - how to transform and tidy your data for your specific needs, using the _[tidyr](https://tidyr.tidyverse.org/)_ and _[dplyr](https://dplyr.tidyverse.org/)_ packages
+  - how to transform date variables, time variables, text variables, and factor variables, using the _[lubridate](https://lubridate.tidyverse.org/)_, _[hms](https://hms.tidyverse.org/)_, _[stringr](https://stringr.tidyverse.org/)_, and _[forcats](https://forcats.tidyverse.org/)_ packages
+  
+- In __We R Visualizers__, you'll learn..
+  - how to create jaw-dropping figures, using the _[ggplot2](https://ggplot2.tidyverse.org/)_ package
+  - how to extend _ggplot2_ with [over 60 visualization techniques](https://www.ggplot2-exts.org/gallery/), including networks, animations, and tv themes
+  - how to export tables to Word, using the _[flextable](https://davidgohel.github.io/flextable/index.html)_ package
+
+## Nerd masterclasses
+
+_(if interest is sufficient)_
+
+- In __We R Reproducible__, you'll learn..
+  - how to get from raw data to your final maniscript, and be reproducible
+  - how to use version control with _[Git](https://git-scm.com/)_ and _[GitHub](https://github.com/)_
+  - how to write reader-friendly R prose using [R style](https://style.tidyverse.org/)
+  - how to write share-friendly R code using projects, and packages like _[here](https://here.r-lib.org/)_ and _[renv](https://rstudio.github.io/renv/)_
+  
+- In __We R Publishers__, you'll learn..
+  - how to integrate code, output, and text (like in this syllabus)
+  - how to make presentations in R
+  - how to create and publish interactive applications with [R Shiny](https://shiny.rstudio.com/)
+  - how to write and publish journal articles and books with R
+  - how to build websites with R
+  - how to check your manuscripts, using the _[statcheck](https://mbnuijten.com/statcheck/)_ and _[retractcheck](https://github.com/libscie/retractcheck)_ packages
+  
+- In __We R Programmers__, you'll learn..
+  - base R
+  - how to write explicit and implicit loops
+  - how to write your own R functions
+  - how to build your own R packages
+  - how to run simulations
+
+## Recommended order
+
+The graph below shows the recommended order of masterclasses.
+
+```{r recommendation, message=FALSE}
+masterclass_recommendation <- data.frame(
+  from = c("We R\nNovices",
+           "We R\nAnalysts",
+           "We R\nTransformers",
+           "We R\nVisualizers",
+           "We R\nReproducible",
+           "We R\nPublishers"),
+  to = c("We R\nAnalysts",
+         "We R\nTransformers",
+         "We R\nVisualizers",
+         "We R\nReproducible",
+         "We R\nPublishers",
+         "We R\nProgrammers"))
+
+qgraph::qgraph(masterclass_recommendation, layout = "circular")
+```
+
+__We R Excited to see you in the next masterclass,__
+
+_Alexander Savi and Simone Plak_
