@@ -1,0 +1,104 @@
+---
+title: We R Preppers
+subtitle: Prep guide for the _We R Champions_ masterclass series
+author:
+  - Alexander Savi, Amsterdam Center for Learning Analytics, [alexandersavi.nl](https://www.alexandersavi.nl/)
+  - Simone Plak, Amsterdam Center for Learning Analytics
+date: "June 23, 2020"
+output:
+  html_document:
+    fig_width: 7
+    highlight: "kate"
+    number_sections: FALSE
+    theme: "spacelab"
+    toc: true
+    toc_depth: 1
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+rmarkdown::find_pandoc(version = '2.7.3')  # 2.7.3 is version of pandoc shipped with rstudio that works with numberLines
+knitr::opts_chunk$set(echo=TRUE, collapse=TRUE, attr.source='.numberLines')
+```
+
+# Welcome
+
+Twenty-five minutes of preparations helps us to have a flying start and quickly get to the fun part: learning R. Make sure to __finish these preparations a week before the start of the masterclass__, as that should give us sufficient time to fix foreseen and unforeseen issues. You'll need to install the required software, introduce yourself on our Q&A platform, and learn how to get the most out of this masterclass.
+
+# Organization
+
+## Materials
+
+You'll receive a document with the complete outline for the masterclass. It includes resources and exercises that you can use both during and after the masterclass. Besides the document, we'll use three pieces of software.
+
+- [R](https://www.r-project.org/). It's the core software.
+- [RStudio](https://rstudio.com/products/rstudio/). A terrific user interface for R.
+- [Piazza](https://piazza.com/?). You'll use it for questions and answers. Anytime during or after the masterclass, you can use it to post your R questions. Piazza helps us to _collaboratively_ answer them. Yes, that's right, you can help your fellow students. Because the questions and answers are available to all of us, we can all learn from them, or help answer them. And guess what, answering questions helps you to develop mastery yourself.
+
+## Activities
+
+In the document that outlines the masterclass, different sections are color-coded. Those colors help you recognize different activities.
+
+- <font color="#E69F00">Plenary activity</font>. `cam on / mic on` We're a class, so let's make it feel like one. These are the moments we can look each other in the eyes and share the pain that optimists call learning.
+- <font color="#D55E00">Instruction</font>. `cam off / mic off` Instructions guide you in your R adventures, separating main issues from side issues, keeping you on the right track. Instructions come in two flavours; live instructions and self-guided instructions. Live instructions speak for themselves. You'll learn the most from doing it yourself, so we'll stick to the main themes and keep it short. Additionally, we've added lots of resources in the document. You're invited to consult these resources whenever you feel like it. You may benefit from them during the exercises, or when you start exploring R on your own.
+- <font color="#009E73">Programming activity</font>. `cam off / mic off` This is what it's all about. You and R alone, and a little help from your fellow students and us. During the programming activities, break out rooms help you discuss the exercises in small groups. Wearing your speedpants today? See if you can help out the others by answering questions on Piazza.
+- <font color="#CC79A7">Break</font>. `cam on / mic on` You'll need one once a while. Have a (virtual) break with the others, go for a stroll, feed your hamster, whatever works for you.
+
+## Mode
+
+__Offline masterclass__
+
+You wish. Corona age is here.
+
+__Online masterclass__
+
+In an online masterclass you'll need [Zoom](https://zoom.us/). You'll use it for the live instructions and for working together in break out rooms.
+
+And yes, [video conferencing drains energy](https://www.bbc.com/worklife/article/20200421-why-zoom-video-chats-are-so-exhausting) for most of us, and it can't be blamed on your fellow students. At least not all of it. We hope the different activities keep it fresh. Using a secondary screen for this masterclass and putting it off to the side can help, but we don't all have that luxury. You may use the camera and microphone `suggestions` that are shown with the activities above.
+
+# Install R
+
+Please install the required software, R and RStudio, as it takes up precious time, things can go wrong (more precious time), and some computers might have restrictions (even more precious time). Let us know immediately if you come across any issues, and we'll make sure to help you fix it in time.
+
+Ready? Follow [these instructions](https://learnr-examples.shinyapps.io/ex-setup-r/) to setup R and RStudio. For now, skip the last part (installing the _tidyverse_ package).
+
+Let's see if everything works as expected. First, run the following code in the console panel of RStudio (the (lower) left panel):
+
+```{r, eval=FALSE}
+print("OMG I FEEL LIKE A PROGRAMMER ALREADY")
+```
+
+Here, `print()` is a called a _function_. A function takes an input, does its magic, and gives some output. The print function simply prints the input to your screen. So far the magic. But learning already!
+
+Then, install and load a package. This way we make sure you have the right permissions. Again, run the following code in your console:
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+library("tidyverse")
+```
+
+This may take a while, you're basically downloading and installing additional software. Packages extend the basic functionality of R. That is, they provide lots of extra functions!
+
+# Install Zoom
+
+`Online masterclasses only` Most of you have been using Zoom more than you ever desired. Didn't use it before? Let us know!
+
+# Introduce yourself
+
+You should have received a Piazza invitation on your VU email address (it might not work with a different one). Check your spam if you cannot find the invitation, or let us know if it is nowhere to be found.
+
+Now, sign up to Piazza and introduce yourself. On Piazza, you should find the post that says "Introduce yourself" and follow the instructions.
+
+You can also use the [Piazza app](https://piazza.com/product/mobile), but it won't be of much use if you want to copy-paste some R code in a question or answer.
+
+# Teaching philosophy
+
+We like to end with our teaching philosophy. Our teaching philosophy in three words: practice, practice, practice, practice. Okay, that were four, but you get the idea.
+
+In each masterclass, we aim to give you the right amount of contextual knowledge, important tools that help you start practicing and learning on your own, and some guidance along the way.
+
+But there's only one way to learn R. You must ..., ..., ..., ...!
+
+And although practice makes perfect, it starts with failure. Lots of it. Learn to fail, make mistakes, fool around, try random stuff. What happens? Why?
+
+__Enjoy!__
